@@ -71,7 +71,7 @@ function App() {
   };
 
   return (
-    <DiaryStateContext.Provider>
+    <DiaryStateContext.Provider value={data}>
       <BrowserRouter>
         <div className="App">
             <Routes>
