@@ -15,7 +15,7 @@ const Edit = ()=>{
             <h1>Edit</h1>
             <p>이곳은 수정페이지입니다</p>
             <button onClick={()=>{
-                                navigate("/home");
+                                navigate("/");
                                 }}>
             HOME</button>
             <button onClick={()=>{
