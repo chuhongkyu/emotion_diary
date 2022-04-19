@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MyButton from "./MyButtton";
+import MyButton from "./MyButton";
 import { useNavigate } from "react-router-dom";
 import DiaryItem from "./DiaryItem";
 

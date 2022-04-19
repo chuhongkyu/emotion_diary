@@ -185,3 +185,28 @@ header button{
 .DiaryItem .btn_wrapper {
   min-width: 70px;
 }
+/* DiaryEditor */
+
+.DiaryEditor{
+
+}
+
+.DiaryEditor section{
+  margin-bottom: 40px;
+}
+
+.DiaryEditor h4{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.DiaryEditor .input_date{
+  border: none;
+  border-radius: 5px;
+  background-color: #ececee;
+
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
+}
