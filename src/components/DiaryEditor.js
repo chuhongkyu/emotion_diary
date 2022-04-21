@@ -15,10 +15,11 @@ const DiaryEditor = ({isEdit, originData})=>{
     const contentRef = useRef();
     const [content, setContent] = useState("");
     const [emotion, setEmotion] = useState(3);
-    const [date, setDate] = useState(getStringDate(new Date()));
-    const navigate = useNavigate();
+    const [date, setDate] = useState(getStringDate(new Date()))
 
     const {onCreate, onEdit} = useContext(DiaryDispatchContext);
+
+    const navigate = useNavigate();
 
     const handleClickEmote = (emotion)=>{
         setEmotion(emotion);    
@@ -38,7 +39,6 @@ const DiaryEditor = ({isEdit, originData})=>{
             }
         }
 
-        onCreate(date , content, emotion);
         navigate('/',{replace: true});
     };
 
@@ -73,11 +73,12 @@ const DiaryEditor = ({isEdit, originData})=>{
                     <div className="input_box emotion_list_wrapper">
                         {emotionList.map((it)=>(
                         <EmotionItem 
-                            key={it.emotion_id}{...it} 
+                            key={it.emotion_id}
+                            {...it} 
                             onClick={handleClickEmote}
                             isSelected={it.emotion_id === emotion}
-                            />)
-                        )}
+                        />
+                        ))}
                     </div>
                 </section>
                 <section>

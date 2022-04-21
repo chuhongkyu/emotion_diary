@@ -4,30 +4,29 @@ import { DiaryStateContext } from "../App";
 import DiaryEditor from "../components/DiaryEditor";
 
 const Edit = ()=>{
-
     const [originData, setOriginData] = useState();
     const navigate = useNavigate();
-    const {id} = useParams();
-    console.log(id);
+    const { id } = useParams();
+    // console.log(id);
    
     const diaryList = useContext(DiaryStateContext);
-    console.log(id);
-    console.log(diaryList);
+    // console.log(id);
+    // console.log(diaryList);
 
     useEffect(()=> {
         if(diaryList.length >= 1){
             const targetDiary = diaryList.find(
                 (it)=> parseInt(it.id) === parseInt(id)
             );
-            console.log(targetDiary);
+            // console.log(targetDiary);
 
             if(targetDiary){
                 setOriginData(targetDiary);
             }else{
                 navigate('/', {replace: true});
             }
-        };
-    }, [id,diaryList]);
+        }
+    }, [id, diaryList]);
 
     return(
         <div>
